@@ -21,7 +21,7 @@ public class IndexController {
     @GetMapping("/")
     public String index(Model model, @LoginUser SessionUser user) {
         model.addAttribute("posts", postsService.findAllDesc());
-        //SessionUser user = (SessionUser) httpSession.getAttribute("user");
+        // SessionUser user = (SessionUser) httpSession.getAttribute("user");
         // @LoginUser SessionUser user: 기존(User)에 HttpSession.getAttribute("user")로 가져오던 세션 정보 값이 개선
         // @LoginUser만 사용하면 세션 정보를 가져올 수 있게 됨
 
